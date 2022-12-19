@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alif medicaments.com</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--Nav Bar-->
+    <nav id="navbar">
+        <div><a href='index.html' target='_self'>
+            <button id="logo"><img id="logo" src="images\cLogo.png" height="50px" width="200px" alt="logo"></button></a>
+        </div>
+        <div id="nbr" >
+            <div>
+                <a href="medicine.html" target="_blank"><button id="medicine" >MEDICINES</button></a>
+            </div>
+            <div>
+                <a href="lab-test.html" target="_blank"><button id="lab-test">LAB TESTS</button><button style="background-color: #ff6f61;margin-left: -5px;" id="safe" class="btn" >SAFE</button></a>
+            </div>
+            <div>
+                <a href="consult-doctor.html" target="_blank"><button id="consult-doctor">CONSULT DOCTORS</button></a>
+            </div>
+            <div>
+                <a href="covid-19.html" target="_blank"><button id="covid-19">COVID-19</button></a>
+            </div>
+            <div>
+                <a href="ayurveda.html" target="_blank"><button id="ayurveda">AYURVEDA</button></a>
+            </div>
+            <div>
+                <a href="care-plan.html" target="_blank"><button id="care-plan">CARE PLAN <button style="background-color:#ff6f61; margin-left: -5px;" class="btn" >SAVE MORE</button></button></a>
+            </div>
+        </div>
+        <div id="user">
+            <!--log in form-->
+            <div class="login"><button id="login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <div id="id01" class="modal">
+                    <form id="form" class="modal-content animate" action="/action_page.php" method="post">
+                      <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      </div>
+                      
+                      <div style="padding-left: 20px;margin-bottom: -10px;">
+                        <h1 style="color: black;">Login</h1>
+                        <p><u>Get access to your orders, lab tests & doctor consultations</u></p>
+                      </div>
+                      <div id="contlogin" class="container">
+                        <label for="uname"><b>Email Id</b></label>
+                        <input id="logEmail" type="text" placeholder="Enter Email" name="email" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input id="logPass" type="password" placeholder="Enter Password" name="psw" required>
+                          
+                        <button id="loginbutton" class="bb" style="background-color: #ff6f61;" type="submit">Login</button>
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                      </div>
+                  
+                      <div id="cancelbtn" class="container" style="background-color:#f1f1f1">
+                        <button class="bb" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span id="change" class="psw">Forgot <a href="#">password?</a></span>
+                      </div>
+                    </form>
+                  </div>
+                
+                
+                |
+                <!--Sign Up form-->
+                <button id="signup" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+                <div id="id02" class="modal">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form id="form-signup" class="modal-content" action="/action_page.php">
+                      <div id="suc" class="container">
+                        <h1>Sign Up</h1>
+                        <p>Please fill in this form to create an account.</p>
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input id="email" type="text" placeholder="Enter Email" name="email" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input id="pass" type="password" placeholder="Enter Password" name="psw" required>
+                  
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input id="passR" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                        </label>
+                  
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                  
+                        <div class="clearfix">
+                            <button id="signupbtn" type="submit" class="signupbtn" style="background-color:black">Sign Up</button>
+                          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                          
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+
+            </div>
+        </div>
+        <div class="login"><button id="offers">Offers</button></div>
+        <a href="cart.html" target="_blank"><button class="login" id="cart"><img src="https://cdn.pixabay.com/photo/2012/04/16/11/34/shopping-35594__340.png" height="25px" width="30px" alt="cart"></button></a>
+
+        <div class="login"><button id="need-help">Need Help?</button></div>
+    </nav>
+    <!--Search bar-->
+    <div class="topnav">
+        <div>
+            <input class="search" type="text" placeholder=" Enter Your City " style="margin-left: 50px;height: 25px;width: 20%; background-color: #f1f4f6;border: none;">
+            <input class="search"  type="text" placeholder=" Search for Medicines and Health Products" style="height: 25px;width: 500px;background-color: #f1f4f6;border: none;">
+            
+        </div>
+        <div><span style="font-size: medium;"> QUICK BUY! Get 25% off on medicines*</span>
+        <button style="font-size: medium;padding: 10px 25px 10px 25px; margin-right: 20px;" class="btn" >Quick Order</button></div>
+    </div>
+    <!--Drop Down -->
+    <div id="dropdowndiv">
+        <div class="dropdown">
+            <button class="dropbtn">Health Resource Center</button>
+            <div class="dropdown-content">
+              <a href="#">All Dieases</a>
+              <a href="#">All Medicines</a>
+              <a href="#">Medicines by therapeutic Class</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Vitamins & Nutrition</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Diabetes</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Healthcare Devices</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Personal Care</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Health Conditions</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Ayurveda Products</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Homeopathy</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Featured</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Covid Essentials</button>
+            <div class="dropdown-content">
+              <a href="#">Covid-19 Self test kits</a>
+              <a href="#">Oxygen Cans & Concentrators</a>
+              <a href="#">Masks</a>
+              <a href="">Sanitizers & Handwash products</a>
+              <a href="">Support your Immunity</a>
+              <a href="">Thermometer</a>
+              <a href="">Chyawamprash</a>
+            </div>
+        </div>   
+    </div>
+    <!--banner -->
+    <div id="banner" >
+        <div id="bannerImage1">
+            <a href="medicine.html" target="_blank">
+                <img class="bannerImage" id="alif" src="https://onemg.gumlet.io/ca163b43-ce33-4440-b5c8-cb4d7ff58e43_1664853845.jpg?w=877&h=200&format=auto" alt="banner">
+            </a>
+        </div>
+        <div id="bannerImage2">
+            <a href="medicine.html" target="_blank">
+                <img class="bannerImage" src="https://onemg.gumlet.io/a_ignore,w_480,h_200,c_fit…o,f_auto/85bbe9a7-230b-4836-bff3-d5f451b426a7.png" alt="Ayurveda">
+            </a>
+        </div>
+    </div>
+    <!--banner Heading -->
+    <div id="BannerHeding" >Alif Medicaments: India’s Leading Online Pharmacy & Healthcare Platform</div>
+    <!--banner with button -->
+    <div id="BannerWithBtn">
+        <a href="care-plan.html">
+            <img id="bannerImageBtn" src="	https://onemg.gumlet.io/image/upload/v1647251796/ueyxzzku83yuvpqxyrwe.png" alt="">
+        </a>
+    </div>
+    <!--Products-->
+    <div id="product">
+        <div id="health-concerns">
+            <h3>Shop by health concerns</h3>
+            <div id="card">
+                <div class="pc-div">
+                    <a href="#">
+                        <div>
+                            <div class="i">
+                                <img src="	https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/c2a0598f-483c-48ff-9783-71e402aa28d3.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Diabetes Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="#">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/ab1da5f4-c074-47d2-b278-a5fbd2c93f1f.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Cardiac Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="#">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/702457a8-ff7d-43a6-bd1d-6bcb278ce686.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Stomach Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="#">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/995e64ba-5bd9-42bc-8db6-5dc0b821c89d.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Liver Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="#">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/ba975795-98dc-4cd8-8b55-3c20230d70e3.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Bone, Joint & Muscle <br> Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="#">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/e77d5099-d905-4462-ab9d-b51802e3739b.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Kidney Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="#">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/fa7ff8e9-f1f8-4a3e-9125-c9b36bcf38cd.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Pain Relief</button></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--popular-categories-->
+    
+        <div id="popular-categories">
+            <div class="brand_button">
+                <h3>Popular Categories</h3>
+                <a href="medicine.html"><button>SEE ALL</button></a>
+            </div>
+            <div id="card">
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/8eda05dc-eb77-409d-9302-c06b8f7aea10.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Top Deals</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/2d31a271-59c7-4d94-a2f7-6d8884bb31a6.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Vitamins & Supplements</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/97f20901-5092-4de2-8b7c-03eb49121dd0.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Ayurveda</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/5184509f-670e-429a-9643-1ff8f512ed04.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Winter Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/9f67d41b-3897-47b2-a69f-0b877774e741.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Sexual Wellness</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/e029ea04-0d4b-4a97-a9b2-41aa93e22b84.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Nutrition Drinks</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/92126463-8dcd-4837-a6e5-873f52ec2a34.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Skin Care</button></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!--Featured-brands-->
+        <div id="Featured-brands">
+            <div class="brand_button">
+                <h3>Featured Brands</h3>
+                <a href="medicine.html"><button>SEE ALL</button></a>
+            </div>
+            <div id="card">
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/d3a10132-7081-43ed-9248-190de36a85b5.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Zandu</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/9b329ec7-ddcd-4b64-a9eb-9bebd2ce2f89.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Himalaya</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/081a8f94-b242-4d39-a2fd-d09a6e2bdc5f.jpg" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Optimum Nutrition</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="	https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/8c3af625-4721-4a2a-93c2-ba680b9d60dd.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Mamaearth</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/3435d566-d9bf-42c0-a773-55d0f79b2ed7.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Baidyanath</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/0dfb23f9-c196-4692-9967-964b48b130fd.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Dabur</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/07fd35ec-738e-47e5-b0f0-7a642ff26bb7.jpg" alt="">   
+                            </div>
+                            <div class="product-btn"><button>TATA 1mg Health Products</button></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Homeopathy-->
+        <div id="Homeopathy">
+            <div class="brand_button">
+                <h3>Homeopathy - top brands</h3>
+                <a href="medicine.html"><button>SEE ALL</button></a>
+            </div>
+            <div id="card">
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…,f_auto/136893d3-a095-4004-9c6b-55eabe15bb82.webp" alt="">   
+                            </div>
+                            <div class="product-btn"><button>ADEL Homeopathy</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/dd41902c-6301-4fc8-8f82-d7e471d22bee.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Dr Willmar Schwabe <br>
+                            India</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/1c9e5cd7-6f91-4d87-a6c4-c25012b696d8.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>SBL Homeopathy</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/55da842b-6057-4fe6-bf69-087c7b78e447.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Bakcon's</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/ab46791a-ef2d-4ef2-9fd2-6c3ee86f7a19.png?format=auto" alt="">   
+                            </div>
+                            <div class="product-btn"><button>BJAIN Homeopathy</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/af3f63f0-4200-4977-8746-f364fb9390a4.png?format=auto" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Dr Batra Products</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/baa1be95-939d-49cb-983e-873aa9449295.png?format=auto" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Wheezal</button></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Winter Care-->
+        <div id="winter-care">
+            <div class="brand_button">
+                <h3>Winter Care</h3>
+                <a href="medicine.html"><button>SEE ALL</button></a>
+            </div>
+            <div id="card">
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/02f7dc4a-6b69-424e-b7d9-e2c53f154aca.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Body & Skin Care</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="	https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/77c68bdd-3418-440b-853c-70e6c4862ccb.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Cough, Cold & Fever</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/0e9c88d5-4f79-4562-87c6-9205bc004c95.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Nebulizers & vaporizers</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/2f78ce84-0a00-4ec4-8d31-716d70d48a60.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Gel & Sprays</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/e126f6d3-deba-4f84-97ce-712ab6a76c23.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Immunity Boosters</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit…o,f_auto/63af7b25-bb83-454f-8aab-2ed181143b54.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Winter Combos</button></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pc-div">
+                    <a href="medicine.html">
+                        <div>
+                            <div class="i">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/0308946c-ce20-4330-b3eb-18e9a0cc8c27.png" alt="">   
+                            </div>
+                            <div class="product-btn"><button>Hair & Scalp Care</button></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!--Ayurveda-->
+        <div>
+            <div class="brand_button">
+                <h3 id="a">Ayurveda</h3>
+                <a href="medicine.html"><button>SEE ALL</button></a>
+            </div>
+        <div id="Ayurveda">
+            <div>
+                <img src="https://onemg.gumlet.io/gutlp8xyngnq8qe5oyqr.jpg" alt="">
+                <h4>Kalimirch</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolore?</p>
+            </div>
+            <div>
+                <img src="https://onemg.gumlet.io/iib15dp5axmwwvwcpu0i.jpg" alt="">
+                <h4>Atis</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, mollitia!</p>
+            </div>
+            <div>
+                <img src="https://onemg.gumlet.io/etuhfduheco0xbdtiutq.jpg" alt="">
+                <h4>Adoosa</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div>
+                <img src="https://onemg.gumlet.io/gygt7roien360xj3be3o.jpg" alt="">
+                <h4>Almond</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minus dolor?</p>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!--footer paragraph-->
+    <div id="fP" >
+        <h2>Stay Healthy with Alif Medicament: Your Favourite Online Pharmacy and Healthcare Platform</h2>
+        <h3>We Bring Care to Health.</h3>
+        <p>Alif Medicaments is India's leading digital healthcare platform. From doctor consultations on chat to online pharmacy and lab tests at home: we have it all covered for you. Having delivered over 25 million orders in 1000+ cities till date, we are on a mission to bring "care" to "health" to give you a flawless healthcare experience.</p>
+        <h3>Alif Medicaments: Your Favourite Online Pharmacy!</h3>
+        <p>Alif Medicaments is India's leading online chemist with over 2 lakh medicines available at the best prices. We are your one-stop destination for other healthcare products as well, such as over the counter pharmaceuticals, healthcare devices and homeopathy and ayurveda medicines.</p>
+        <p>With Alif Medicaments, you can buy medicines online and get them delivered at your doorstep anywhere in India! But, is ordering medicines online a difficult process? Not at all! Simply search for the products you want to buy, add to cart and checkout. Now all you need to do is sit back as we get your order delivered to you.</p>
+        <p>In case you need assistance, just give us a call and we will help you complete your order.</p>
+        <p>And there is more! At Alif Medicaments, you can buy health products and medicines online at best discounts.</p>
+        <p>Now, isn't that easy? Why go all the way to the medicine store and wait in line, when you have Alif Medicaments Pharmacy at your service.</p>
+        <h3>The Feathers in Our Cap</h3>
+        <p>At Alif Medicaments, our goal is to make healthcare understandable, accessible and affordable in India. We set out on our journey in 2015, and have come a long way since then. Along the way, we have been conferred with prestigious titles like <b>BML Munjal Award for 'Business Excellence through Learning and Development', Best Online Pharmacy in India Award</b> and <b>Top 50 venture in The Smart CEO-Startup50 India.</b> We have been selected as the only company from across the globe for <b>SD#3 "Health & Well Being for all" by Unreasonable group, US State Department.</b> In 2019 alone we received three awards including the <b>BMW Simply Unstoppable Award.</b></p>
+        <h3>The Services We Offer</h3>
+        <p>Alif Medicaments is India's leading digital healthcare platform, where you can buy medicines online with discount. Buy medicine online in Delhi, Mumbai, Bangalore, Hyderabad, Pune, Gurgaon, Noida, Kolkata, Chennai, Ahmedabad, Lucknow and around a 1000 more cities. Besides delivering your online medicine order at your doorstep, we provide accurate, authoritative & trustworthy information on medicines and help people use their medicines effectively and safely.</p>
+        <p>We also facilitate lab tests at home. You can avail over 2,000 tests and get tested by 120+ top and verified labs at the best prices. Need to consult a doctor? On our platform, you can talk to over 20 kinds of specialists in just a few clicks.</p>
+        <p>Customer centricity is the core of our values. Our team of highly trained and experienced doctors, phlebotomists and pharmacists looks into each order to give you a fulfilling experience.</p>
+        <p>We’ve made healthcare accessible to millions by giving them quality care at affordable prices. Customer centricity is the core of our values. Our team of highly trained and experienced doctors, phlebotomists and pharmacists looks into each order to give you a fulfilling experience.</p>
+        <p>Visit our online medical store now, and avail online medicine purchase at a discount.</p>
+        Stay Healthy!
+    </div>
+    <!--2nd last footer text-->
+    <div id="secondLastdiv" >
+        <div id="c">INDIA’S LARGEST HEALTHCARE PLATFORM</div>
+        <div id="inside" >
+            <div><h1>260m+</h1>
+                <p>Visitors</p></div>
+            <div><h1>31m+</h1>
+                <p>Orders Delivered</p></div>
+            <div><h1>1800+</h1>
+                <p>Cities</p></div>
+        </div>
+        <hr>
+        <div id="get">
+            <div>Get the link to download App</div>
+            <div><input id="phone-number" type="tel" maxlength="10" autocomplete="off" placeholder="Enter Phone Number" > <button class="btn" style="font-size: large;padding: 8px;" >Send Link</button></div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer id="footer">
+        <div id="Footer" >
+            <div class="links">
+                <h3>Know Us</h3>
+                <div><a href="#">About Us</a></div>
+                <div><a href="">Contact Us</a></div>
+                <div><a href="">Press Coverage</a></div>
+                <div><a href="">Careers</a></div>
+                <div><a href="">Business Partnership</a></div>
+                <div><a href="">Become a Health Partner</a></div>
+                <div><a href="">Corporate Governance</a></div>
+            </div>
+            <div class="links">
+                <h3>Our Policies</h3>
+                <div><a href="#">Privacy Policy</a></div>
+                <div><a href="">Terms and Conditions</a></div>
+                <div><a href="">Editorial Policy</a></div>
+                <div><a href="">Return Policy</a></div>
+                <div><a href="">IP Policy</a></div>
+                <div><a href="">Grievance Redressal Policy</a></div>
+                <div><a href="">Fake Jobs and Fraud Disclaimer</a></div>       
+            </div>
+            <div class="links">
+                <h3>Our Services</h3>
+                <div><a href="#">Order Medicines</a></div>
+                <div><a href="">Book Lab Tests</a></div>
+                <div><a href="">Consult a Doctor</a></div>
+                <div><a href="">Ayurveda Articles</a></div>
+                <div><a href="">Hindi Articles</a></div>
+                <div><a href="">Care Plan</a></div>     
+            </div>
+            <div class="links">
+                <h3>Connect</h3>
+                <p>Social Links</p>
+                <div id="social">
+                    <a href="https://www.facebook.com/profile.php?id=100005418004578" target="_blank"><img src="images\facebook-icon-app-21.jpg" alt="" ></a>
+                    <a href="https://www.instagram.com/zaidalifsiddique/?hl=en" target="_blank"><img src="images\isntagram-icon-3.jpg" alt=""></a>
+                    <a href="https://twitter.com/mdzaidsiddique" target="_blank"><img src="images\twitter-icon-svg-9.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/channel/UCRscylxrK6ROgCIZox0GChg" target="_blank"><img src="images\5700683_youtube-circle-icon-youtube-logo-high-quality-hd.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/md-zaid-siddique-3970611ab/" target="_blank"><img src="images\free-linkedin-icon-24.jpg" alt=""></a>
+                    <a href="https://medium.com/@zaidsiddique624" target="_blank"><img src="images\medium-icon-24.jpg" alt=""></a>
+                </div>
+                <p>Want daily dose of health?</p>
+                <button class="btn" >SIGN UP</button>
+            </div>
+            <div class="links" style="margin-left: 10px;margin-top: 5px;">
+                <h3>Download App</h3>
+                <div><a href="https://play.google.com/store/apps/details?id=com.aranoah.healthkart.plus" target="_blank"><img src="images\7925825_google-play-google-play-hd-png-download.png" alt=""></a></div>
+                <div><a href="https://apps.apple.com/in/app/1mg/id554578419"target="_blank"><img style="width: 105px;" src="images\app-store-icon-28.jpg" alt=""></a></div>
+                
+            </div>
+        </div>
+        <hr>
+        <div id="RSA">
+            <div class="rsa">
+                <div id="img"> <img src="images\reliable-icon-2.jpg" alt=""></div>
+                <div>
+                    <h1>Reliable</h1>
+                    <p>All products displayed on Alif Medicaments are procured from verified and licensed pharmacies. All labs listed on the platform are accredited</p>
+                </div>
+            </div>
+            <div class="rsa">
+                <div id="img"> <img src="images\secured-icon-4.jpeg" alt=""></div>
+                <div>
+                    <h1>Secure</h1>
+                    <p>Tata 1mg uses Secure Sockets Layer (SSL) 128-bit encryption and is Payment Card Industry Data Security Standard (PCI DSS) compliant</p>
+                </div>
+            </div>
+            <div class="rsa">
+                <div id="img"> <img src="images\affordable-512_1389.png" alt=""></div>
+                <div>
+                    <h1>Affordable</h1>
+                    <p>Find affordable medicine substitutes, save up to 50% on health products, up to 80% off on lab tests and free doctor consultations.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div id="iso">
+            <div id="iiso">
+                <div><a href="https://www.legitscript.com/" target="_blank"><img src="https://static.legitscript.com/seals/729605.png" alt="ISO"> </a></div>
+                <div><img src="https://onemg.gumlet.io/URS_ebgmxc.png" alt=""></div>
+            </div>
+            <div style="text-align: center;"><b>India's only LegitScript and ISO/ IEC 27001 certified online healthcare platform</b></div>
+        </div>
+
+        <button class="collapsible">Know more about Alif Medicaments</button>
+            <div class="content">
+                <h3>Access medical and health information</h3>
+                <p>Alif Medicaments provides you with medical information which is curated, written and verified by experts, accurate and trustworthy. Our experts create high-quality content about medicines, diseases, lab investigations, Over-The-Counter (OTC) health products, Ayurvedic herbs/ingredients, and alternative remedies.</p>
+                <h3>Order medicines online</h3>
+                <p>Get free medicine home delivery in over 1800 cities across India. You can also order Ayurvedic, Homeopathic and other Over-The-Counter (OTC) health products. Your safety is our top priority. All products displayed on Alif Medicaments are procured from verified and licensed pharmacies.</p>
+                <h3>Book lab tests</h3>
+                <p>Book any lab tests and preventive health packages from certified labs and get tested from the comfort of your home. Enjoy free home sample collection, view reports online and consult a doctor online for free.</p>
+                <h3>Consult a doctor online</h3>
+                <p>Got a health query? Consult doctors online from the comfort of your home for free. Chat privately with our registered medical specialists to connect directly with verified doctors. Your privacy is guaranteed.</p>
+            
+            </div>
+        <hr>
+        <div id="last">
+            <p>© 2022 Alif Medicamnets. All rights reserved. In compliance with Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945, we don't process requests for Schedule X and other habit forming drugs.</p>
+            <div><img src="images\payment-methods.png" alt="paymnets"></div>
+        </div>
+      </footer>
+
+</body>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+var modal1 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+
+    let img = document.getElementById('alif')
+    let arr = [
+    "https://onemg.gumlet.io/ca163b43-ce33-4440-b5c8-cb4d7ff58e43_1664853845.jpg?w=877&h=200&format=auto",
+    "https://onemg.gumlet.io/f671116e-a826-47c5-bdf6-8fbae8ea379f_1670219125.jpg?w=960&h=200&format=auto",
+    "https://onemg.gumlet.io/531b5819-7aec-4ee4-a2f9-d15d3a066d1c_1666072358.jpg?w=960&h=200&format=auto",
+    "https://onemg.gumlet.io/c0aa6172-44cf-470a-a75e-e0c6fc4cf362_1670405053.png?w=960&h=200&format=auto",
+    "https://onemg.gumlet.io/f671116e-a826-47c5-bdf6-8fbae8ea379f_1670219125.jpg?w=960&h=200&format=auto",
+    "https://onemg.gumlet.io/d940d202-87f1-484c-a00b-bb5f4d95706c_1669962593.jpg?w=960&h=200&format=auto",
+    "https://onemg.gumlet.io/346f28fa-1c58-480f-af5b-9568ba2d0dae_1670317321.jpg?w=960&h=200&format=auto",
+    "https://onemg.gumlet.io/f4588afb-3c1e-4924-ab9f-a1764044a714_1670244640.jpg?w=960&h=200&format=auto"
+    ];
+    let j=0;
+    setInterval(function(){
+        img.src = arr[j];
+        j++;
+        if(j==arr.length){
+            j=0
+        }
+    },3000) 
+
+  //signUp
+
+let myForm = document.getElementById('form-signup');
+let signUpCont = document.getElementById('suc')
+let signUpData =JSON.parse(localStorage.getItem('signup')) || [];
+myForm.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  let obj = {
+    email : myForm.email.value,
+    pass: myForm.pass.value,
+    passR: myForm.passR.value
+  }
+    signUpData.push(obj);
+    localStorage.setItem('signup', JSON.stringify(signUpData));
+    signupbtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    // alert('Sign Up Successful!, Login now')
+    let s = document.createElement('div');
+    s.innerText = 'Sign Up Successful!';
+    s.style.color = 'mat';
+    s.style.fontSize = 'xx-large';
+    let loginafterSignup = document.createElement('a');
+    loginafterSignup.innerText = 'click here to login'
+    loginafterSignup.setAttribute('href', 'index.html')
+    loginafterSignup.style.padding = '0px 5px 0px 550px'
+    signUpCont.append(s,loginafterSignup);
+    loginafterSignup.style.fontSize = 'large'
+    // signUpCont.style.display = 'flex'
+    // signupbtn.innerText = signUpCont
+
+})
+})
+let signupbtn = document.getElementById('signupbtn');
+let loginbutton = document.getElementById('loginbutton');
+
+// console.log(signUpData[0].email, signUpData[0].pass)
+
+  //logIn
+  let loginEmail = document.getElementById('logEmail');
+  let loginPass = document.getElementById('logPass');
+
+let logincont =  document.getElementById('contlogin')
+
+let change = document.getElementById('change')
+let user = document.getElementById('user')
+
+  let logIn = document.getElementById('form');
+  logIn.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    signUpData.forEach(element => {
+        if(loginEmail.value!==element.email || loginPass.value !==element.pass){
+            // logincont.innerText = 'Wrong Credential!', 'tryAgain';
+            // logincont.style.color = '#ff6f61';
+            // logincont.style.fontSize = 'x-large'
+        }
+        else{
+            logincont.innerText = 'Login Successful!';
+            logincont.style.color = '#ff6f61';
+            logincont.style.fontSize = 'xx-large';
+            user.innerText = loginEmail.value;
+            // let gotoCart = document.createElement('a');
+            // gotoCart.setAttribute('href', 'cart.html');
+            // logincont.append(gotoCart)
+
+
+        }
+    });
+  })
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
