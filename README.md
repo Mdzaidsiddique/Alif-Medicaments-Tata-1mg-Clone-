@@ -1,4 +1,4 @@
-# -plausible-zipper-1035
+# Alif Medicaments (TATA 1mg Clone)
 construct week project
 
 ## This is the cloned website of Tata 1mg.
